@@ -1,6 +1,6 @@
 <?php
 
-echo "<h1>Tugas</h1>";
+echo "<h1>Tugas Pratikum Backend</h1>";
 echo "<p><strong>NIM:</strong> 0110223127</p>";
 echo "<p><strong>Nama:</strong> Muhammad Khalid Shafwan</p>";
 echo "<p><strong>Prodi:</strong> Teknik Informatika</p>";
@@ -87,12 +87,16 @@ $animal->index();
 
 # Menambahkan hewan baru
 $animal->store('kuda nil');
+$animal->store('ayam');
 
 # Mengupdate hewan
 $animal->update(0, 'burung dara');
+$animal->update(0, 'elang');
+
 
 # Menghapus hewan
 $animal->destroy(0);
 $animal->destroy(2);
+$animal->destroy(4);
 
 ?>
