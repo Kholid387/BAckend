@@ -94,4 +94,22 @@ class StudentController extends Controller
 
         return response()->json($response, 200);
     }
+
+    // Menampilkan data menggunakan ID
+    public function show($id){
+        $student = student::find($id);
+
+        if ($student){
+            $data = [
+                'message' => 'Get detail student',
+                'data' => $student,
+            ];
+            return response()->json($data, 200);
+        }else{
+            $data = [
+                'message' => 'Student not found',
+            ];
+            return response()->json($data, 404);
+        }
+    }
 }
